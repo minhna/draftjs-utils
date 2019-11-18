@@ -127,7 +127,7 @@ export function getEntityRange(editorState: EditorState, entityKey: string): any
 /**
 * Collection of all custom inline styles.
 */
-const customInlineStylesMap =
+export const customInlineStylesMap =
   {
     color: {},
     bgcolor: {},
