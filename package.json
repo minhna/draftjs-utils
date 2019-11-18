@@ -1,10 +1,10 @@
 {
   "name": "draftjs-utils",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Collection of utility function for use with Draftjs.",
   "main": "lib/draftjs-utils.js",
   "peerDependencies": {
-    "draft-js": "^0.10.x",
+    "draft-js": "^0.11.x",
     "immutable": "3.x.x || 4.x.x"
   },
   "devDependencies": {
@@ -16,7 +16,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
-    "draft-js": "^0.10.4",
+    "draft-js": "^0.11.2",
     "immutable": "^3.8.2",
     "enzyme": "^3.2.0",
     "eslint": "^4.12.1",
@@ -40,11 +40,9 @@
   },
   "scripts": {
     "clean": "rimraf lib",
-    "build:webpack":
-      "NODE_ENV=production webpack --config config/webpack.prod.config.js",
+    "build:webpack": "NODE_ENV=production webpack --config config/webpack.prod.config.js",
     "build": "npm run clean && npm run build:webpack",
-    "test":
-      "mocha --compilers js:config/test-compiler.js config/test-setup.js js/**/*Test.js",
+    "test": "mocha --compilers js:config/test-compiler.js config/test-setup.js js/**/*Test.js",
     "lint": "eslint js",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "check": "npm run lint && npm run flow"
